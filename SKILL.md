@@ -41,6 +41,8 @@ Default crawl behavior is append-only. Do not overwrite existing JSONL records. 
 
 Use cached results as fallback context when fetching fails. Do not use Supabase, Next.js app code, or external databases from this skill.
 
+If a venue calendar returns a generic page item instead of events, inspect the HTML for dynamic calendar data before giving up. Some sites use Queue-it waiting rooms plus Algolia InstantSearch containers. Follow the cookie-preserving JavaScript redirect, extract `data-settings` from `#algoliaSearchCont`, and query Algolia by timestamp range. See `references/dynamic-calendars.md`.
+
 Built-in resolvers convert YouTube channel URLs to YouTube Atom feeds when a channel ID is available, including `/channel/UC...`, `@handle` by fetching the page and extracting a channel ID, and existing YouTube feed URLs. Apple Podcasts URLs resolve to podcast RSS feed URLs through the iTunes Lookup API when available.
 
 ## Query Rules
