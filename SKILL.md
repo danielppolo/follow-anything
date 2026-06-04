@@ -11,20 +11,20 @@ Default data files:
 
 - Resources: `~/.hermes/data/follow-anything/resources.yaml`
 - Cache: `~/.hermes/data/follow-anything/fetched-results.jsonl`
-- Installed wrapper: `~/.hermes/skills/follow-anything/scripts/follow-anything.ts`
+- Installed wrapper when installed in the `research` category: `~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts`
 
-Run commands with the skill directory wrapper path:
+Run commands with the installed skill wrapper path:
 
 ```bash
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts --help
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts list
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts add --name "ODC Calendar" --url "https://odc.dance/calendar" --kind event --tags dance,performance,calendar --city "San Francisco" --region "California" --country "United States"
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts remove --name "ODC Calendar"
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts crawl
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts refresh
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts query --tag dance --city "San Francisco"
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts query --kind event --from 2026-01-01 --to 2026-12-31 --json
-node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts repair
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts --help
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts list
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts add --name "ODC Calendar" --url "https://odc.dance/calendar" --kind event --tags dance,performance,calendar --city "San Francisco" --region "California" --country "United States"
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts remove --name "ODC Calendar"
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts crawl
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts refresh
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts query --tag dance --city "San Francisco"
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts query --kind event --from 2026-01-01 --to 2026-12-31 --json
+node --experimental-strip-types ~/.hermes/skills/research/follow-anything/scripts/follow-anything.ts repair
 ```
 
 Use `--resources PATH` and `--cache PATH` for alternate files, especially in tests or one-off projects.
