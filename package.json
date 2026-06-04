@@ -1,0 +1,22 @@
+{
+  "name": "follow-anything",
+  "version": "0.1.0",
+  "description": "Hermes skill for following feeds, channels, calendars, podcasts, and pages.",
+  "type": "module",
+  "bin": {
+    "follow-anything": "./scripts/follow-anything.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "follow-anything": "node --experimental-strip-types scripts/follow-anything.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}
