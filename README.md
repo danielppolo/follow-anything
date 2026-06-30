@@ -18,6 +18,24 @@ When installed as a Hermes skill, commands should use:
 node --experimental-strip-types ~/.hermes/skills/follow-anything/scripts/follow-anything.ts list
 ```
 
+## Optional Hermes Tweet Companion
+
+For followed topics that need X/Twitter discovery, profile lookup, replies,
+trend checks, monitors, or approved follow-up actions, install the optional
+Hermes Tweet companion skill:
+
+```bash
+hermes plugins install Xquik-dev/hermes-tweet --enable
+mkdir -p ~/.hermes/skills/social-media/hermes-tweet
+rsync -a companions/hermes-tweet/ ~/.hermes/skills/social-media/hermes-tweet/
+hermes tools list
+```
+
+Use Follow Anything for RSS, Atom, podcast, YouTube, iCal, and generic page
+resources. Use Hermes Tweet when the source is native X/Twitter data. Keep
+`XQUIK_API_KEY` in the Hermes runtime environment and keep writes gated by
+`HERMES_TWEET_ENABLE_ACTIONS=true`.
+
 ## Data Files
 
 Defaults:
